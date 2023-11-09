@@ -1,0 +1,11 @@
+package christmas;
+
+public class OutputMessages {
+    public static final String EVENT_PREVIEW_MESSAGE = "12월 %d일에 우테코 식당에서 받을 이벤트 혜택 미리 보기!";
+    public static final String ORDER_MENUS = "<주문 메뉴>";
+    public static final String TOTAL_ORDER_BEFORE_DISCOUNT = "<할인 전 총주문 금액>";
+    public static final String EVENT_LOG = "<혜택 내역>";
+    public static final String TOTAL_DISCOUNT = "<총혜택 금액>";
+    public static final String TOTAL_ORDER_AFTER_DISCOUNT = "<할인 후 예상 결제 금액>";
+    public static final String DEC_EVENT_BADGE = "<12월 이벤트 배지>";
+}
