@@ -13,11 +13,11 @@ public class Utils {
         return Integer.parseInt(input);
     }
 
-    public static ArrayList<String> splitWithComma(String input) {
+    public static List<String> splitWithComma(String input) {
         return new ArrayList<>(Arrays.asList(input.split(COMMA)));
     }
 
-    public static ArrayList<String> splitWithDash(String input) {
+    public static List<String> splitWithDash(String input) {
         return new ArrayList<>(Arrays.asList(input.split(DASH)));
     }
 }
