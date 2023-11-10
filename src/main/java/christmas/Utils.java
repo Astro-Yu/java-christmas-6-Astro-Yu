@@ -20,4 +20,13 @@ public class Utils {
     public static List<String> splitWithDash(String input) {
         return new ArrayList<>(Arrays.asList(input.split(DASH)));
     }
+
+    public static boolean isDigit(String input) {
+        for (int index = 0; index < input.length(); index++) {
+            if (!Character.isDigit(input.charAt(index))) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

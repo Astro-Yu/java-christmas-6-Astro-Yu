@@ -1,5 +1,7 @@
 package christmas;
 
+import static christmas.Utils.isDigit;
+
 public class InputValidator {
     public static void checkInputEmpty(String input) {
         if (isEmpty(input)) {
@@ -27,13 +29,5 @@ public class InputValidator {
         return input.isEmpty();
     }
 
-    private static boolean isDigit(String input) {
-        for (int index = 0; index < input.length(); index++) {
-            if (!Character.isDigit(input.charAt(index))) {
-                return true;
-            }
-        }
-        return false;
-    }
 }
 
