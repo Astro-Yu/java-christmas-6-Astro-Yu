@@ -1,20 +1,18 @@
 package christmas;
 
 public enum FirstDays {
-    SUN(3, false),
-    MON(4, false),
-    TUE(5, false),
-    WED(6, false),
-    THU(7, false),
-    FRI(1, true),
-    SAT(2, true);
+    SUN(3),
+    MON(4),
+    TUE(5),
+    WED(6),
+    THU(7),
+    FRI(1),
+    SAT(2);
 
     private final int firstDayOfDec;
-    private final boolean isWeekend;
 
-    FirstDays(int firstDayOfDec, boolean isWeekend) {
+    FirstDays(int firstDayOfDec) {
         this.firstDayOfDec = firstDayOfDec;
-        this.isWeekend = isWeekend;
     }
 
     public int getFirstDayOfDec() {
