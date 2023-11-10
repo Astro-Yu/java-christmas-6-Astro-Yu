@@ -16,13 +16,21 @@ public class Order {
         validate();
     }
 
+    public String getName() {
+        return this.name;
+    }
+
+    public int getCount() {
+        return this.count;
+    }
+
     private void validate() {
         checkInvalidCount();
         checkOrderInMenu();
     }
 
     private void checkOrderInMenu() {
-        List<String> menuNames = christmas.Menu.getMenuNamesAsList();
+        List<String> menuNames = Menu.getMenuNames();
         if (!menuNames.contains(name)) {
             throw new IllegalArgumentException(ErrorMessages.INPUT_INVALID_ORDER.getMessage());
         }
