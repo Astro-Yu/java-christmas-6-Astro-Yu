@@ -2,6 +2,8 @@ package christmas;
 
 import static christmas.ErrorMessages.INVALID_DATE_RANGE;
 
+import java.util.List;
+
 public class Day {
 
     private final int date;
@@ -20,6 +22,16 @@ public class Day {
                 || date % 7 == FirstDays.SAT.getFirstDayOfDec();
     }
 
+    public boolean isStarDay() {
+        List<Integer> starDay = SpecialDays.getStarDay();
+        return starDay.contains(date);
+    }
+
+    public boolean isChristmas() {
+        List<Integer> christmas = SpecialDays.getChristmas();
+        return christmas.contains(date);
+    }
+    
     private void validate() {
         isProperRange();
     }
