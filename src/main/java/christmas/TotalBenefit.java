@@ -4,7 +4,6 @@ import static christmas.Badge.SANTA_BADGE;
 import static christmas.Badge.STAR_BADGE;
 import static christmas.Badge.TREE_BADGE;
 
-
 public class TotalBenefit {
 
     private final int price;
@@ -39,7 +38,7 @@ public class TotalBenefit {
 
     private void isSantaBadge() {
         if (price >= SANTA_BADGE.getCriticalPrice()) {
-            this.badge = STAR_BADGE.getName();
+            this.badge = SANTA_BADGE.getName();
         }
     }
 }

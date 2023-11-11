@@ -15,8 +15,8 @@ public class PriceBeforeDiscountTest {
     void over120kWonTest(int target) {
         PriceBeforeDiscount priceBeforeDiscount = new PriceBeforeDiscount(target);
 
-        boolean result = priceBeforeDiscount.over120kWon();
-        boolean answer = true;
+        String result = priceBeforeDiscount.getGiftMenu();
+        String answer = "샴페인 1개";
 
         assertThat(result).isEqualTo(answer);
 

@@ -11,6 +11,10 @@ import java.util.List;
 
 public class InputView {
 
+    public static void printStartMessage() {
+        System.out.println(InputMessages.START_MESSAGE);
+    }
+
     public int readDate() {
         System.out.println(InputMessages.ENTER_VISIT_DATE);
         String input = Console.readLine();
