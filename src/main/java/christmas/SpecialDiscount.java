@@ -5,7 +5,9 @@ public class SpecialDiscount extends discount {
 
     public SpecialDiscount(Day day) {
         this.day = day;
-        calculateDiscount();
+        if (day.isStarDay()) {
+            calculateDiscount();
+        }
     }
 
     @Override

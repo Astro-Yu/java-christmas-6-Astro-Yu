@@ -9,7 +9,9 @@ public class ChristmasDiscount extends discount {
 
     public ChristmasDiscount(Day day) {
         this.day = day;
-        calculateDiscount();
+        if (day.isChristmas()) {
+            calculateDiscount();
+        }
     }
 
     @Override

@@ -2,7 +2,8 @@ package christmas;
 
 public class GiftEvent extends discount {
 
-    public GiftEvent(Day day) {
+    public GiftEvent(Orders orders, Day day) {
+        this.orders = orders;
         this.day = day;
         calculateDiscount();
     }

@@ -9,7 +9,9 @@ public class WeekdayDiscount extends discount {
     public WeekdayDiscount(Orders orders, Day day) {
         this.orders = orders;
         this.day = day;
-        calculateDiscount();
+        if (!day.isWeekend()) {
+            calculateDiscount();
+        }
     }
 
     @Override
