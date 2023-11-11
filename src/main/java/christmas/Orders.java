@@ -5,7 +5,6 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public class Orders {
-    private final static int MINIMUM_GIFT_AMOUNT = 12_000;
     List<Order> OrderedItems;
 
     public Orders(List<Order> orderedItems) {

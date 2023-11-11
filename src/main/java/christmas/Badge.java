@@ -1,9 +1,9 @@
 package christmas;
 
 public enum Badge {
-    STAR_BADGE("별",5_000),
-    TREE_BADGE("트리",10_000),
-    SANTA("산타",20_000);
+    STAR_BADGE("별", 5_000),
+    TREE_BADGE("트리", 10_000),
+    SANTA_BADGE("산타", 20_000);
 
     private final String name;
     private final int criticalPrice;
@@ -13,11 +13,11 @@ public enum Badge {
         this.criticalPrice = criticalPrice;
     }
 
-    public String getName(){
+    public String getName() {
         return this.name;
     }
 
-    public int getCriticalPrice(){
+    public int getCriticalPrice() {
         return this.criticalPrice;
     }
 }
