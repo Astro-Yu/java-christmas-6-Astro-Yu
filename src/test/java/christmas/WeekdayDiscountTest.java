@@ -19,7 +19,7 @@ public class WeekdayDiscountTest {
 
         Orders orders = new Orders(List.of(order1, order2, order3));
 
-        WeekdayDiscount weekdayDiscount = new WeekdayDiscount(orders);
+        WeekdayDiscount weekdayDiscount = new WeekdayDiscount(orders, new Day(11));
 
         int result = weekdayDiscount.getDiscountedValue();
         int answer = 2023 * target;
@@ -37,7 +37,7 @@ public class WeekdayDiscountTest {
 
         Orders orders = new Orders(List.of(order1, order2, order3));
 
-        WeekdayDiscount weekdayDiscount = new WeekdayDiscount(orders);
+        WeekdayDiscount weekdayDiscount = new WeekdayDiscount(orders, new Day(11));
 
         int result = weekdayDiscount.getDiscountedValue();
         int answer = 2023 * (target + 3);

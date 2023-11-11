@@ -19,7 +19,7 @@ public class WeekendDiscountTest {
 
         Orders orders = new Orders(List.of(order1, order2, order3));
 
-        WeekendDiscount weekendDiscount = new WeekendDiscount(orders);
+        WeekendDiscount weekendDiscount = new WeekendDiscount(orders, new Day(11));
 
         int result = weekendDiscount.getDiscountedValue();
         int answer = 2023 * target;
@@ -37,7 +37,7 @@ public class WeekendDiscountTest {
 
         Orders orders = new Orders(List.of(order1, order2, order3));
 
-        WeekendDiscount weekendDiscount = new WeekendDiscount(orders);
+        WeekendDiscount weekendDiscount = new WeekendDiscount(orders, new Day(11));
 
         int result = weekendDiscount.getDiscountedValue();
         int answer = 2023 * (target + 3);

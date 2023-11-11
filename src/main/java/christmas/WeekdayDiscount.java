@@ -4,10 +4,11 @@ import java.util.List;
 
 public class WeekdayDiscount extends discount {
 
-    private final static int discountPerMenu = 2_023;
+    private final static int DISCOUNT_PER_MENU = 2_023;
 
-    public WeekdayDiscount(Orders orders) {
+    public WeekdayDiscount(Orders orders, Day day) {
         this.orders = orders;
+        this.day = day;
         calculateDiscount();
     }
 
@@ -20,11 +21,17 @@ public class WeekdayDiscount extends discount {
                 .mapToInt(Order::getCount)
                 .sum();
 
-        this.discountedPrice = desertMenuCount * discountPerMenu;
+        this.discountedPrice = desertMenuCount * DISCOUNT_PER_MENU;
     }
 
     @Override
     public int getDiscountedValue() {
         return discountedPrice;
+    }
+
+    @Override
+    public boolean isEventActive() {
+        return day.getDate() >= SpecialDays.DEC_1ST.getDate()
+                && day.getDate() <= SpecialDays.DEC_31ST.getDate();
     }
 }

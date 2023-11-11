@@ -11,6 +11,10 @@ public class Day {
         validate();
     }
 
+    public int getDate() {
+        return date;
+    }
+
     public boolean isWeekend() {
         return date % 7 == FirstDays.FRI.getFirstDayOfDec()
                 || date % 7 == FirstDays.SAT.getFirstDayOfDec();
