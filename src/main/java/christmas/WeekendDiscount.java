@@ -2,25 +2,25 @@ package christmas;
 
 import java.util.List;
 
-public class WeekdayDiscount extends discount {
+public class WeekendDiscount extends discount {
 
     private final static int discountPerMenu = 2_023;
 
-    public WeekdayDiscount(Orders orders) {
+    public WeekendDiscount(Orders orders) {
         this.orders = orders;
         calculateDiscount();
     }
 
     @Override
     public void calculateDiscount() {
-        int desertMenuCount = 0;
+        int mainMenuCount = 0;
         List<Order> orderedItems = orders.getOrderedItems();
-        desertMenuCount = orderedItems.stream()
-                .filter(x -> Menu.getDesertMenu().contains(x.getName()))
+        mainMenuCount = orderedItems.stream()
+                .filter(x -> Menu.getMainMenu().contains(x.getName()))
                 .mapToInt(Order::getCount)
                 .sum();
 
-        this.discountedPrice = desertMenuCount * discountPerMenu;
+        this.discountedPrice = mainMenuCount * discountPerMenu;
     }
 
     @Override
