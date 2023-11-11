@@ -12,6 +12,10 @@ public class Orders {
         validate();
     }
 
+    public List<Order> getOrderedItems() {
+        return OrderedItems;
+    }
+
     private void validate() {
         checkAllSize();
         checkDuplicateMenu();
@@ -47,4 +51,5 @@ public class Orders {
             throw new IllegalArgumentException(ErrorMessages.INPUT_INVALID_ORDER.getMessage());
         }
     }
+
 }
