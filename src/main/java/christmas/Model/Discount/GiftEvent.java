@@ -6,12 +6,11 @@ import christmas.Constants.SpecialDays;
 import christmas.Model.Day;
 import christmas.Model.Orders;
 
-public class GiftEvent extends discount {
+public class GiftEvent extends Discount {
 
     public GiftEvent(Orders orders, Day day) {
         this.orders = orders;
         this.day = day;
-        calculateDiscount();
     }
 
     @Override

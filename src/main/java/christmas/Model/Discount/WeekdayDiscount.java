@@ -8,15 +8,13 @@ import christmas.Model.Order;
 import christmas.Model.Orders;
 import java.util.List;
 
-public class WeekdayDiscount extends discount {
+public class WeekdayDiscount extends Discount {
 
     private final static int DISCOUNT_PER_MENU = 2_023;
 
     public WeekdayDiscount(Orders orders, Day day) {
         this.orders = orders;
         this.day = day;
-        calculateDiscount();
-
     }
 
     @Override

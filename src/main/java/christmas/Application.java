@@ -8,6 +8,5 @@ public class Application {
         EventController eventController = new EventController();
 
         eventController.runEvent();
-
     }
 }

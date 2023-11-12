@@ -11,6 +11,7 @@ import christmas.Model.Discount.WeekendDiscount;
 import christmas.Model.EventLog;
 import christmas.Model.Order;
 import christmas.Model.Orders;
+import christmas.Model.PriceBeforeDiscount;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.jupiter.api.DisplayName;
@@ -33,9 +34,10 @@ public class EventLogTest {
         WeekdayDiscount weekdayDiscount = new WeekdayDiscount(orders, day);
         WeekendDiscount weekendDiscount = new WeekendDiscount(orders, day);
         SpecialDiscount specialDiscount = new SpecialDiscount(day);
+        PriceBeforeDiscount priceBeforeDiscount = new PriceBeforeDiscount(orders);
 
         EventLog eventLog = new EventLog(christmasDiscount, giftEvent, specialDiscount, weekdayDiscount,
-                weekendDiscount);
+                weekendDiscount, priceBeforeDiscount);
 
         List<String> result = eventLog.getEventHistory();
 
