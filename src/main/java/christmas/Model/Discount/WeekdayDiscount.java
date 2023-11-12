@@ -1,5 +1,11 @@
-package christmas;
+package christmas.Model.Discount;
 
+import christmas.Constants.Constants;
+import christmas.Constants.Menu;
+import christmas.Constants.SpecialDays;
+import christmas.Model.Day;
+import christmas.Model.Order;
+import christmas.Model.Orders;
 import java.util.List;
 
 public class WeekdayDiscount extends discount {
@@ -9,14 +15,13 @@ public class WeekdayDiscount extends discount {
     public WeekdayDiscount(Orders orders, Day day) {
         this.orders = orders;
         this.day = day;
-        if (!day.isWeekend()) {
-            calculateDiscount();
-        }
+        calculateDiscount();
+
     }
 
     @Override
     public void calculateDiscount() {
-        int desertMenuCount = 0;
+        int desertMenuCount;
         List<Order> orderedItems = orders.getOrderedItems();
         desertMenuCount = orderedItems.stream()
                 .filter(x -> Menu.getDesertMenu().contains(x.getName()))
@@ -33,7 +38,13 @@ public class WeekdayDiscount extends discount {
 
     @Override
     public boolean isEventActive() {
-        return day.getDate() >= SpecialDays.DEC_1ST.getDate()
+        return !day.isWeekend()
+                && day.getDate() >= SpecialDays.DEC_1ST.getDate()
                 && day.getDate() <= SpecialDays.DEC_31ST.getDate();
+    }
+
+    @Override
+    public String getEventLog() {
+        return String.format(Constants.WEEKDAY_DISCOUNT + discountedPrice + Constants.WON);
     }
 }

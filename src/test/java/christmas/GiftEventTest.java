@@ -2,6 +2,10 @@ package christmas;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import christmas.Model.Day;
+import christmas.Model.Discount.GiftEvent;
+import christmas.Model.Order;
+import christmas.Model.Orders;
 import java.util.List;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

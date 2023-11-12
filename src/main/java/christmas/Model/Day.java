@@ -1,7 +1,9 @@
-package christmas;
+package christmas.Model;
 
-import static christmas.ErrorMessages.INVALID_DATE_RANGE;
+import static christmas.Constants.ErrorMessages.INVALID_DATE_RANGE;
 
+import christmas.Constants.FirstDays;
+import christmas.Constants.SpecialDays;
 import java.util.List;
 
 public class Day {
@@ -31,7 +33,7 @@ public class Day {
         List<Integer> christmas = SpecialDays.getChristmas();
         return christmas.contains(date);
     }
-    
+
     private void validate() {
         isProperRange();
     }

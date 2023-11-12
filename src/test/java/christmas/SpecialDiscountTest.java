@@ -2,6 +2,8 @@ package christmas;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import christmas.Model.Day;
+import christmas.Model.Discount.SpecialDiscount;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

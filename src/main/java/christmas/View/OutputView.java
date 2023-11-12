@@ -1,5 +1,13 @@
-package christmas;
+package christmas.View;
 
+import christmas.Constants.Constants;
+import christmas.Constants.OutputMessages;
+import christmas.Model.Day;
+import christmas.Model.Discount.PriceBeforeDiscount;
+import christmas.Model.EventLog;
+import christmas.Model.Order;
+import christmas.Model.Orders;
+import christmas.Model.TotalBenefit;
 import java.util.List;
 
 public class OutputView {
@@ -14,13 +22,13 @@ public class OutputView {
         List<Order> orderItems = orders.getOrderedItems();
 
         orderItems.stream()
-                .map(order -> String.format("%s %d개", order.getName(), order.getCount()))
+                .map(order -> String.format("%s %d" + Constants.COUNT, order.getName(), order.getCount()))
                 .forEach(System.out::println);
     }
 
     public static void printOriginalPrice(PriceBeforeDiscount priceBeforeDiscount) {
         System.out.println(OutputMessages.TOTAL_ORDER_BEFORE_DISCOUNT);
-        System.out.println(priceBeforeDiscount.getPrice());
+        System.out.println(String.format(priceBeforeDiscount.getPrice() + Constants.WON));
     }
 
     public static void printGiftEvent(PriceBeforeDiscount priceBeforeDiscount) {
@@ -28,13 +36,16 @@ public class OutputView {
         System.out.println(priceBeforeDiscount.getGiftMenu());
     }
 
-    public static void printEventLog() {
+    public static void printEventLog(EventLog eventLog) {
         System.out.println(OutputMessages.EVENT_LOG);
+        List<String> eventHistory = eventLog.getEventHistory();
+
+        eventHistory.forEach(System.out::println);
     }
 
     public static void printAllBenefit(TotalBenefit totalBenefit) {
         System.out.println(OutputMessages.TOTAL_DISCOUNT);
-        System.out.println(String.format(Constants.MINUS + totalBenefit.getPrice()));
+        System.out.println(String.format(Constants.MINUS + totalBenefit.getPrice() + Constants.WON));
     }
 
     public static void printAfterDiscount() {

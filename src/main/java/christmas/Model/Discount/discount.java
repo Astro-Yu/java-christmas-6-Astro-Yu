@@ -1,4 +1,7 @@
-package christmas;
+package christmas.Model.Discount;
+
+import christmas.Model.Day;
+import christmas.Model.Orders;
 
 public abstract class discount {
 
@@ -11,4 +14,6 @@ public abstract class discount {
     abstract public int getDiscountedValue();
 
     abstract public boolean isEventActive();
+
+    abstract public String getEventLog();
 }

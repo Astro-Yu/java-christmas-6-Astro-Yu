@@ -1,4 +1,4 @@
-package christmas;
+package christmas.View;
 
 import static christmas.InputValidator.checkInputBlank;
 import static christmas.InputValidator.checkInputDigit;
@@ -7,6 +7,7 @@ import static christmas.Utils.splitWithComma;
 import static christmas.Utils.stringToInteger;
 
 import camp.nextstep.edu.missionutils.Console;
+import christmas.Constants.InputMessages;
 import java.util.List;
 
 public class InputView {

@@ -1,4 +1,4 @@
-package christmas;
+package christmas.Constants;
 
 public enum FirstDays {
     SUN(3),

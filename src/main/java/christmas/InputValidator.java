@@ -2,6 +2,8 @@ package christmas;
 
 import static christmas.Utils.isDigit;
 
+import christmas.Constants.ErrorMessages;
+
 public class InputValidator {
     public static void checkInputEmpty(String input) {
         if (isEmpty(input)) {

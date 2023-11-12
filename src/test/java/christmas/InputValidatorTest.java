@@ -1,5 +1,6 @@
 package christmas;
 
+import christmas.Constants.ErrorMessages;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

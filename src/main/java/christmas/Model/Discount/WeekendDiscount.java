@@ -1,5 +1,11 @@
-package christmas;
+package christmas.Model.Discount;
 
+import christmas.Constants.Constants;
+import christmas.Constants.Menu;
+import christmas.Constants.SpecialDays;
+import christmas.Model.Day;
+import christmas.Model.Order;
+import christmas.Model.Orders;
 import java.util.List;
 
 public class WeekendDiscount extends discount {
@@ -9,9 +15,7 @@ public class WeekendDiscount extends discount {
     public WeekendDiscount(Orders orders, Day day) {
         this.orders = orders;
         this.day = day;
-        if (day.isWeekend()) {
-            calculateDiscount();
-        }
+        calculateDiscount();
     }
 
     @Override
@@ -33,7 +37,13 @@ public class WeekendDiscount extends discount {
 
     @Override
     public boolean isEventActive() {
-        return day.getDate() >= SpecialDays.DEC_1ST.getDate()
+        return day.isWeekend()
+                && day.getDate() >= SpecialDays.DEC_1ST.getDate()
                 && day.getDate() <= SpecialDays.DEC_31ST.getDate();
+    }
+
+    @Override
+    public String getEventLog() {
+        return String.format(Constants.WEEKEND_DISCOUNT + discountedPrice + Constants.WON);
     }
 }

@@ -1,4 +1,8 @@
-package christmas;
+package christmas.Model.Discount;
+
+import christmas.Constants.Constants;
+import christmas.Constants.SpecialDays;
+import christmas.Model.Day;
 
 public class ChristmasDiscount extends discount {
 
@@ -9,9 +13,7 @@ public class ChristmasDiscount extends discount {
 
     public ChristmasDiscount(Day day) {
         this.day = day;
-        if (day.isChristmas()) {
-            calculateDiscount();
-        }
+        calculateDiscount();
     }
 
     @Override
@@ -26,6 +28,11 @@ public class ChristmasDiscount extends discount {
 
     @Override
     public boolean isEventActive() {
-        return day.getDate() <= SpecialDays.DEC_25TH.getDate();
+        return day.isChristmas() && day.getDate() <= SpecialDays.DEC_25TH.getDate();
+    }
+
+    @Override
+    public String getEventLog() {
+        return String.format(Constants.CHRISTMAS_DISCOUNT + discountedPrice + Constants.WON);
     }
 }

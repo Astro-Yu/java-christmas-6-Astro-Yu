@@ -1,8 +1,10 @@
-package christmas;
+package christmas.Model;
 
-import static christmas.Badge.SANTA_BADGE;
-import static christmas.Badge.STAR_BADGE;
-import static christmas.Badge.TREE_BADGE;
+import static christmas.Constants.Badge.SANTA_BADGE;
+import static christmas.Constants.Badge.STAR_BADGE;
+import static christmas.Constants.Badge.TREE_BADGE;
+
+import christmas.Constants.Constants;
 
 public class TotalBenefit {
 

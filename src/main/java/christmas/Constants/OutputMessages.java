@@ -1,4 +1,4 @@
-package christmas;
+package christmas.Constants;
 
 public class OutputMessages {
     public static final String BENEFIT_PREVIEW_MESSAGE = "12월 %d일에 우테코 식당에서 받을 이벤트 혜택 미리 보기!";

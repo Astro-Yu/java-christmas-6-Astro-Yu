@@ -1,13 +1,15 @@
-package christmas;
+package christmas.Model.Discount;
+
+import christmas.Constants.Constants;
+import christmas.Constants.SpecialDays;
+import christmas.Model.Day;
 
 public class SpecialDiscount extends discount {
     private final static int specialDiscountValue = 1_000;
 
     public SpecialDiscount(Day day) {
         this.day = day;
-        if (day.isStarDay()) {
-            calculateDiscount();
-        }
+        calculateDiscount();
     }
 
     @Override
@@ -22,7 +24,13 @@ public class SpecialDiscount extends discount {
 
     @Override
     public boolean isEventActive() {
-        return day.getDate() >= SpecialDays.DEC_1ST.getDate()
+        return day.isStarDay()
+                && day.getDate() >= SpecialDays.DEC_1ST.getDate()
                 && day.getDate() <= SpecialDays.DEC_31ST.getDate();
+    }
+
+    @Override
+    public String getEventLog() {
+        return String.format(Constants.SPECIAL_DISCOUNT + discountedPrice + Constants.WON);
     }
 }

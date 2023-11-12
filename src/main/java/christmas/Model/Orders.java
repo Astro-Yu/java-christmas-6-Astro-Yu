@@ -1,5 +1,7 @@
-package christmas;
+package christmas.Model;
 
+import christmas.Constants.ErrorMessages;
+import christmas.Constants.Menu;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
