@@ -3,6 +3,7 @@ package christmas.Model;
 import christmas.Constants.ErrorMessages;
 import christmas.Constants.Menu;
 import java.util.List;
+import java.util.Map;
 
 
 public class Order {
@@ -24,6 +25,11 @@ public class Order {
 
     public int getCount() {
         return this.count;
+    }
+
+    public int getPrice() {
+        Map<String, Integer> menuAndPrice = Menu.getMenuNamesAndPrices();
+        return menuAndPrice.get(name) * count;
     }
 
     private void validate() {

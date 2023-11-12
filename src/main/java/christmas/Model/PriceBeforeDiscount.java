@@ -1,4 +1,4 @@
-package christmas.Model.Discount;
+package christmas.Model;
 
 import static christmas.Constants.Menu.CHAMPANGE;
 
@@ -7,16 +7,17 @@ import christmas.Constants.Constants;
 public class PriceBeforeDiscount {
     private final static int MINIMUM_GIFT_AMOUNT = 120_000;
     private final static int MINIMUM_DISCOUNT_AMOUNT = 10_000;
-
-    private final int price;
     private static String gift = Constants.NOTHING;
 
-    public PriceBeforeDiscount(int price) {
-        this.price = price;
+    private final Orders orders;
+
+
+    public PriceBeforeDiscount(Orders orders) {
+        this.orders = orders;
     }
 
     public int getPrice() {
-        return price;
+        return orders.getTotalPrice();
     }
 
     public String getGiftMenu() {
@@ -27,11 +28,11 @@ public class PriceBeforeDiscount {
     }
 
     public boolean over10kWon() {
-        return price >= MINIMUM_DISCOUNT_AMOUNT;
+        return orders.getTotalPrice() >= MINIMUM_DISCOUNT_AMOUNT;
     }
 
     private boolean over120kWon() {
-        return price >= MINIMUM_GIFT_AMOUNT;
+        return orders.getTotalPrice() >= MINIMUM_GIFT_AMOUNT;
     }
 
 }

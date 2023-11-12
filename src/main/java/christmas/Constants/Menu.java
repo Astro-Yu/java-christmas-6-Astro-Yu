@@ -2,6 +2,7 @@ package christmas.Constants;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public enum Menu {
@@ -77,5 +78,10 @@ public enum Menu {
                 .filter(Menu::isMain)
                 .map(Menu::getName)
                 .collect(Collectors.toList());
+    }
+
+    public static Map<String, Integer> getMenuNamesAndPrices() {
+        return Arrays.stream(Menu.values())
+                .collect(Collectors.toMap(Menu::getName, Menu::getPrice));
     }
 }

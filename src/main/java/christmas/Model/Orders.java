@@ -18,6 +18,10 @@ public class Orders {
         return OrderedItems;
     }
 
+    public int getTotalPrice() {
+        return OrderedItems.stream().mapToInt(Order::getPrice).sum();
+    }
+
     private void validate() {
         checkAllSize();
         checkDuplicateMenu();

@@ -27,6 +27,12 @@ public class EventLog {
         this.weekendDiscount = weekendDiscount;
     }
 
+    public int getTotalBenefit() {
+        return christmasDiscount.getDiscountedValue() + giftEvent.getDiscountedValue()
+                + specialDiscount.getDiscountedValue()
+                + weekdayDiscount.getDiscountedValue() + weekendDiscount.getDiscountedValue();
+    }
+
     public List<String> getEventHistory() {
         if (christmasDiscount.isEventActive()) {
             eventHistory.add(christmasDiscount.getEventLog());
