@@ -6,6 +6,7 @@ import christmas.Model.Discount.GiftEvent;
 import christmas.Model.Discount.SpecialDiscount;
 import christmas.Model.Discount.WeekdayDiscount;
 import christmas.Model.Discount.WeekendDiscount;
+import java.util.ArrayList;
 import java.util.List;
 
 public class EventLog {
@@ -15,7 +16,7 @@ public class EventLog {
     WeekdayDiscount weekdayDiscount;
     WeekendDiscount weekendDiscount;
 
-    List<String> eventHistory;
+    List<String> eventHistory = new ArrayList<>();
 
     public EventLog(ChristmasDiscount christmasDiscount, GiftEvent giftEvent, SpecialDiscount specialDiscount,
                     WeekdayDiscount weekdayDiscount, WeekendDiscount weekendDiscount) {

@@ -45,6 +45,6 @@ public class WeekdayDiscount extends discount {
 
     @Override
     public String getEventLog() {
-        return String.format(Constants.WEEKDAY_DISCOUNT + discountedPrice + Constants.WON);
+        return String.format(Constants.WEEKDAY_DISCOUNT + Constants.MINUS + discountedPrice + Constants.WON);
     }
 }

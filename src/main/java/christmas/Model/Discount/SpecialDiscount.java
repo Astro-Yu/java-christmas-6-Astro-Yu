@@ -31,6 +31,6 @@ public class SpecialDiscount extends discount {
 
     @Override
     public String getEventLog() {
-        return String.format(Constants.SPECIAL_DISCOUNT + discountedPrice + Constants.WON);
+        return String.format(Constants.SPECIAL_DISCOUNT + Constants.MINUS + discountedPrice + Constants.WON);
     }
 }

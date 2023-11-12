@@ -32,6 +32,6 @@ public class GiftEvent extends discount {
 
     @Override
     public String getEventLog() {
-        return String.format(Constants.GIFT_EVENT + discountedPrice + Constants.WON);
+        return String.format(Constants.GIFT_EVENT + Constants.MINUS + discountedPrice + Constants.WON);
     }
 }

@@ -28,11 +28,11 @@ public class ChristmasDiscount extends discount {
 
     @Override
     public boolean isEventActive() {
-        return day.isChristmas() && day.getDate() <= SpecialDays.DEC_25TH.getDate();
+        return day.getDate() <= SpecialDays.DEC_25TH.getDate();
     }
 
     @Override
     public String getEventLog() {
-        return String.format(Constants.CHRISTMAS_DISCOUNT + discountedPrice + Constants.WON);
+        return String.format(Constants.CHRISTMAS_DISCOUNT + Constants.MINUS + discountedPrice + Constants.WON);
     }
 }
