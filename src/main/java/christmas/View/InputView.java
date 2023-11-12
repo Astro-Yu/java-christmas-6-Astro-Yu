@@ -16,7 +16,7 @@ public class InputView {
         System.out.println(InputMessages.START_MESSAGE);
     }
 
-    public int readDate() {
+    public static int readDate() {
         System.out.println(InputMessages.ENTER_VISIT_DATE);
         String input = Console.readLine();
         validateInputDate(input);
@@ -24,7 +24,7 @@ public class InputView {
         return stringToInteger(input);
     }
 
-    public List<String> readOrders() {
+    public static List<String> readOrders() {
         System.out.println(InputMessages.ENTER_ORDER_PROMPT);
         String input = Console.readLine();
         validateInputOrders(input);
@@ -32,12 +32,12 @@ public class InputView {
         return splitWithComma(input);
     }
 
-    private void validateInputOrders(String input) {
+    private static void validateInputOrders(String input) {
         checkInputEmpty(input);
         checkInputBlank(input);
     }
 
-    private void validateInputDate(String input) {
+    private static void validateInputDate(String input) {
         checkInputEmpty(input);
         checkInputBlank(input);
         checkInputDigit(input);
