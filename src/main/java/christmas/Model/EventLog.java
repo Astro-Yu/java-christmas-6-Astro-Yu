@@ -53,11 +53,15 @@ public class EventLog {
         }
         if (weekdayDiscount.isEventActive() && priceBeforeDiscount.over10kWon()) {
             weekdayDiscount.calculateDiscount();
-            eventHistory.add(weekdayDiscount.getEventLog());
+            if (weekdayDiscount.getDiscountedValue() > 0) {
+                eventHistory.add(weekdayDiscount.getEventLog());
+            }
         }
         if (weekendDiscount.isEventActive() && priceBeforeDiscount.over10kWon()) {
             weekendDiscount.calculateDiscount();
-            eventHistory.add(weekendDiscount.getEventLog());
+            if (weekendDiscount.getDiscountedValue() > 0) {
+                eventHistory.add(weekendDiscount.getEventLog());
+            }
         }
         if (giftEvent.isEventActive() && priceBeforeDiscount.over10kWon() && priceBeforeDiscount.over120kWon()) {
             giftEvent.calculateDiscount();

@@ -42,7 +42,7 @@ public class WeekdayDiscountTest {
 
         Orders orders = new Orders(List.of(order1, order2, order3));
 
-        WeekdayDiscount weekdayDiscount = new WeekdayDiscount(orders, new Day(11));
+        WeekdayDiscount weekdayDiscount = new WeekdayDiscount(orders, new Day(31));
         weekdayDiscount.calculateDiscount();
 
         int result = weekdayDiscount.getDiscountedValue();
