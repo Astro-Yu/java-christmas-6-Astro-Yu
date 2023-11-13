@@ -3,6 +3,7 @@ package christmas;
 import static christmas.Utils.isDigit;
 
 import christmas.Constants.ErrorMessages;
+import java.util.regex.Pattern;
 
 public class InputValidator {
     public static void checkInputEmpty(String input) {
@@ -23,6 +24,12 @@ public class InputValidator {
         }
     }
 
+    public static void checkInputFormat(String input) {
+        if (!isValidOrderFormat(input)) {
+            throw new IllegalArgumentException(ErrorMessages.INPUT_INVALID_ORDER.getMessage());
+        }
+    }
+
     private static boolean isBlank(String input) {
         return input.isBlank();
     }
@@ -31,5 +38,9 @@ public class InputValidator {
         return input.isEmpty();
     }
 
+    private static boolean isValidOrderFormat(String input) {
+        String regex = "[가-힇]+-\\D+";
+        return Pattern.matches(regex, input);
+    }
 }
 

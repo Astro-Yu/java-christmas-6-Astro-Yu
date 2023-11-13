@@ -38,4 +38,13 @@ public class InputValidatorTest {
                 .hasMessageContaining(ErrorMessages.INVALID_NUMBER_MESSAGE.getMessage());
     }
 
+    @ParameterizedTest
+    @DisplayName("숫자 형식을 확인합니다.")
+    @ValueSource(strings = {"Icecream-1", "아이스크림-", "ㅇㅇㅇ-ㅏ", "아이스크림1"})
+    void checkOrderFormatTest(String input) {
+        Assertions.assertThatThrownBy(() -> InputValidator.checkInputFormat(input))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessageContaining(ErrorMessages.INPUT_INVALID_ORDER.getMessage());
+    }
+
 }

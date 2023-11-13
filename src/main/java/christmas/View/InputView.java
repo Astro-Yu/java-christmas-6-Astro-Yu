@@ -3,6 +3,7 @@ package christmas.View;
 import static christmas.InputValidator.checkInputBlank;
 import static christmas.InputValidator.checkInputDigit;
 import static christmas.InputValidator.checkInputEmpty;
+import static christmas.InputValidator.checkInputFormat;
 import static christmas.Utils.splitWithComma;
 import static christmas.Utils.stringToInteger;
 
@@ -29,12 +30,19 @@ public class InputView {
         String input = Console.readLine();
         validateInputOrders(input);
 
-        return splitWithComma(input);
+        List<String> orders = splitWithComma(input);
+
+        for (String order : orders) {
+            checkInputFormat(order);
+        }
+
+        return orders;
     }
 
     private static void validateInputOrders(String input) {
         checkInputEmpty(input);
         checkInputBlank(input);
+        checkInputFormat(input);
     }
 
     private static void validateInputDate(String input) {
