@@ -38,8 +38,8 @@ public class InputValidator {
         return input.isEmpty();
     }
 
-    private static boolean isValidOrderFormat(String input) {
-        String regex = "[가-힇]+-\\D+";
+    public static boolean isValidOrderFormat(String input) {
+        String regex = "[가-힣]+-[0-9]+";
         return Pattern.matches(regex, input);
     }
 }

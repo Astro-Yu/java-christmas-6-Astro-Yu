@@ -42,7 +42,6 @@ public class InputView {
     private static void validateInputOrders(String input) {
         checkInputEmpty(input);
         checkInputBlank(input);
-        checkInputFormat(input);
     }
 
     private static void validateInputDate(String input) {

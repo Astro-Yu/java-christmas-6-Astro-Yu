@@ -39,7 +39,7 @@ public class InputValidatorTest {
     }
 
     @ParameterizedTest
-    @DisplayName("숫자 형식을 확인합니다.")
+    @DisplayName("주문 형식을 확인합니다.")
     @ValueSource(strings = {"Icecream-1", "아이스크림-", "ㅇㅇㅇ-ㅏ", "아이스크림1"})
     void checkOrderFormatTest(String input) {
         Assertions.assertThatThrownBy(() -> InputValidator.checkInputFormat(input))
