@@ -32,7 +32,7 @@ public class OutputView {
 
     public static void printOriginalPrice(PriceBeforeDiscount priceBeforeDiscount) {
         System.out.println(OutputMessages.TOTAL_ORDER_BEFORE_DISCOUNT);
-        System.out.printf(numberFormat(priceBeforeDiscount.getPrice()) + Constants.WON);
+        System.out.println(numberFormat(priceBeforeDiscount.getPrice()) + Constants.WON);
         System.out.println();
     }
 
@@ -52,7 +52,12 @@ public class OutputView {
 
     public static void printAllBenefit(TotalBenefit totalBenefit) {
         System.out.println(OutputMessages.TOTAL_DISCOUNT);
-        System.out.println(Constants.MINUS + numberFormat(totalBenefit.getPrice()) + Constants.WON);
+        if (totalBenefit.getPrice() > 0) {
+            System.out.println(Constants.MINUS + numberFormat(totalBenefit.getPrice()) + Constants.WON);
+        }
+        if (totalBenefit.getPrice() == 0) {
+            System.out.println(totalBenefit.getPrice() + Constants.WON);
+        }
         System.out.println();
     }
 

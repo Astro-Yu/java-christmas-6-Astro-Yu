@@ -36,9 +36,8 @@ class MyApplicationTest extends NsTest {
     }
 
     @ParameterizedTest
-    //@DisplayName("주문 형식을 지켰는지 확인합니다.");
     @ValueSource(strings = {"아이스크림", "아이스크림한개", "아이스크림-", "아이스크림1"})
-    void inputFormatTest(String target) {
+    void 주문_형식_테스트(String target) {
         assertSimpleTest(() -> {
             runException("3", target);
             assertThat(output()).contains("[ERROR] 유효하지 않은 주문입니다. 다시 입력해 주세요.");

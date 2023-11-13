@@ -12,7 +12,8 @@ public class SpecialDiscountTest {
     @DisplayName("스페셜 할인을 확인합니다.")
     void specialDiscountTest() {
 
-        SpecialDiscount specialDiscount = new SpecialDiscount(new Day(11));
+        SpecialDiscount specialDiscount = new SpecialDiscount(new Day(3));
+        specialDiscount.calculateDiscount();
 
         int result = specialDiscount.getDiscountedValue();
         int answer = 1000;

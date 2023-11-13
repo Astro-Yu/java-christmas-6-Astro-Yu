@@ -59,7 +59,7 @@ public class EventLog {
             weekendDiscount.calculateDiscount();
             eventHistory.add(weekendDiscount.getEventLog());
         }
-        if (giftEvent.isEventActive() && priceBeforeDiscount.over10kWon()) {
+        if (giftEvent.isEventActive() && priceBeforeDiscount.over10kWon() && priceBeforeDiscount.over120kWon()) {
             giftEvent.calculateDiscount();
             eventHistory.add(giftEvent.getEventLog());
         }

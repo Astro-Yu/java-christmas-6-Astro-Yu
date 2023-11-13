@@ -31,7 +31,7 @@ public class PriceBeforeDiscount {
         return orders.getTotalPrice() >= MINIMUM_DISCOUNT_AMOUNT;
     }
 
-    private boolean over120kWon() {
+    public boolean over120kWon() {
         return orders.getTotalPrice() >= MINIMUM_GIFT_AMOUNT;
     }
 

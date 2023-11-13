@@ -29,11 +29,6 @@ public class Day {
         return starDay.contains(date);
     }
 
-    public boolean isChristmas() {
-        List<Integer> christmas = SpecialDays.getChristmas();
-        return christmas.contains(date);
-    }
-
     private void validate() {
         isProperRange();
     }

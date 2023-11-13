@@ -9,6 +9,7 @@ public enum SpecialDays {
     DEC_3RD(3, true, false),
     DEC_10TH(10, true, false),
     DEC_17TH(17, true, false),
+    DEC_24TH(24, true, false),
     DEC_25TH(25, true, true),
     DEC_31ST(31, true, false);
 
