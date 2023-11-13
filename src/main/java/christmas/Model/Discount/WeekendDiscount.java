@@ -1,5 +1,7 @@
 package christmas.Model.Discount;
 
+import static christmas.Utils.numberFormat;
+
 import christmas.Constants.Constants;
 import christmas.Constants.Menu;
 import christmas.Constants.SpecialDays;
@@ -43,6 +45,7 @@ public class WeekendDiscount extends Discount {
 
     @Override
     public String getEventLog() {
-        return String.format(Constants.WEEKEND_DISCOUNT + Constants.MINUS + discountedPrice + Constants.WON);
+        return String.format(
+                Constants.WEEKEND_DISCOUNT + Constants.MINUS + numberFormat(discountedPrice) + Constants.WON);
     }
 }

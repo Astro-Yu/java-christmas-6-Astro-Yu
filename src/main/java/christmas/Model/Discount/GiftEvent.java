@@ -1,5 +1,7 @@
 package christmas.Model.Discount;
 
+import static christmas.Utils.numberFormat;
+
 import christmas.Constants.Constants;
 import christmas.Constants.Menu;
 import christmas.Constants.SpecialDays;
@@ -31,6 +33,6 @@ public class GiftEvent extends Discount {
 
     @Override
     public String getEventLog() {
-        return String.format(Constants.GIFT_EVENT + Constants.MINUS + discountedPrice + Constants.WON);
+        return String.format(Constants.GIFT_EVENT + Constants.MINUS + numberFormat(discountedPrice) + Constants.WON);
     }
 }

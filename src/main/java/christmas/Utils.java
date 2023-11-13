@@ -1,5 +1,6 @@
 package christmas;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -28,5 +29,10 @@ public class Utils {
             }
         }
         return false;
+    }
+
+    public static String numberFormat(int input) {
+        NumberFormat numberFormat = NumberFormat.getNumberInstance();
+        return numberFormat.format(input);
     }
 }

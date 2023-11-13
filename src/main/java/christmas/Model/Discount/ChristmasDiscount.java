@@ -1,8 +1,11 @@
 package christmas.Model.Discount;
 
+import static christmas.Utils.numberFormat;
+
 import christmas.Constants.Constants;
 import christmas.Constants.SpecialDays;
 import christmas.Model.Day;
+
 
 public class ChristmasDiscount extends Discount {
 
@@ -17,7 +20,7 @@ public class ChristmasDiscount extends Discount {
 
     @Override
     public void calculateDiscount() {
-        discountedPrice = INITIAL_DISCOUNT + DISCOUNT_PER_DAY * day.getDate();
+        discountedPrice = INITIAL_DISCOUNT + DISCOUNT_PER_DAY * (day.getDate() - 1);
     }
 
     @Override
@@ -32,6 +35,7 @@ public class ChristmasDiscount extends Discount {
 
     @Override
     public String getEventLog() {
-        return String.format(Constants.CHRISTMAS_DISCOUNT + Constants.MINUS + discountedPrice + Constants.WON);
+        return String.format(
+                Constants.CHRISTMAS_DISCOUNT + Constants.MINUS + numberFormat(discountedPrice) + Constants.WON);
     }
 }

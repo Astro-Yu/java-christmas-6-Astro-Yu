@@ -37,6 +37,11 @@ public class EventLog {
                 + weekdayDiscount.getDiscountedValue() + weekendDiscount.getDiscountedValue();
     }
 
+    public int getExpectedDiscount() {
+        return christmasDiscount.getDiscountedValue() + specialDiscount.getDiscountedValue()
+                + weekdayDiscount.getDiscountedValue() + weekendDiscount.getDiscountedValue();
+    }
+
     public List<String> getEventHistory() {
         if (christmasDiscount.isEventActive() && priceBeforeDiscount.over10kWon()) {
             christmasDiscount.calculateDiscount();

@@ -29,7 +29,7 @@ public class EventController {
         OutputView.printEventLog(eventLog);
 
         OutputView.printAllBenefit(new TotalBenefit(eventLog.getTotalBenefit()));
-        OutputView.printAfterDiscount(orders, eventLog.getTotalBenefit());
+        OutputView.printAfterDiscount(orders, eventLog.getExpectedDiscount());
 
         OutputView.printEventBadge(new TotalBenefit(eventLog.getTotalBenefit()));
     }

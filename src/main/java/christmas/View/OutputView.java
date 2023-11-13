@@ -1,5 +1,7 @@
 package christmas.View;
 
+import static christmas.Utils.numberFormat;
+
 import christmas.Constants.Constants;
 import christmas.Constants.OutputMessages;
 import christmas.Model.Day;
@@ -30,7 +32,7 @@ public class OutputView {
 
     public static void printOriginalPrice(PriceBeforeDiscount priceBeforeDiscount) {
         System.out.println(OutputMessages.TOTAL_ORDER_BEFORE_DISCOUNT);
-        System.out.printf(priceBeforeDiscount.getPrice() + Constants.WON + "%n");
+        System.out.printf(numberFormat(priceBeforeDiscount.getPrice()) + Constants.WON);
         System.out.println();
     }
 
@@ -50,13 +52,13 @@ public class OutputView {
 
     public static void printAllBenefit(TotalBenefit totalBenefit) {
         System.out.println(OutputMessages.TOTAL_DISCOUNT);
-        System.out.println(Constants.MINUS + totalBenefit.getPrice() + Constants.WON);
+        System.out.println(Constants.MINUS + numberFormat(totalBenefit.getPrice()) + Constants.WON);
         System.out.println();
     }
 
-    public static void printAfterDiscount(Orders orders, int benefit) {
+    public static void printAfterDiscount(Orders orders, int discount) {
         System.out.println(OutputMessages.TOTAL_ORDER_AFTER_DISCOUNT);
-        System.out.println(orders.getTotalPrice() - benefit + Constants.WON);
+        System.out.println(numberFormat(orders.getTotalPrice() - discount) + Constants.WON);
         System.out.println();
     }
 
