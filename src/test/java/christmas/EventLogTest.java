@@ -20,9 +20,9 @@ import org.junit.jupiter.api.Test;
 
 public class EventLogTest {
 
-    Order order1 = new Order("양송이수프", 5);
-    Order order2 = new Order("아이스크림", 5);
-    Order order3 = new Order("티본스테이크", 9);
+    Order order1 = new Order("양송이수프", "5");
+    Order order2 = new Order("아이스크림", "5");
+    Order order3 = new Order("티본스테이크", "9");
     Orders orders = new Orders(List.of(order1, order2, order3));
     Day day = new Day(25);
 

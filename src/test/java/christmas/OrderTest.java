@@ -14,18 +14,19 @@ public class OrderTest {
     @ValueSource(strings = {"설탕콜라", "타피스", "비본스테이크", "스크림아이"})
     void orderMenuNameTest(String target) {
 
-        Assertions.assertThatThrownBy(() -> new Order(target, 1))
+        Assertions.assertThatThrownBy(() -> new Order(target, "1"))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining(ErrorMessages.INPUT_INVALID_ORDER.getMessage());
     }
 
     @ParameterizedTest
-    @DisplayName("음식의 갯수가 유효한 범위인지 확인합니다.")
-    @ValueSource(ints = {0, 21})
-    void orderMenuNameTest(int target) {
+    @DisplayName("음식의 갯수가 유효한 값인지 확인합니다.")
+    @ValueSource(strings = {"0", "21", "ㅁ"})
+    void orderMenuCountTest(String target) {
 
         Assertions.assertThatThrownBy(() -> new Order("타파스", target))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining(ErrorMessages.INPUT_INVALID_ORDER.getMessage());
     }
+
 }

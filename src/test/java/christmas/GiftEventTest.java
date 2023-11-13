@@ -16,11 +16,12 @@ public class GiftEventTest {
     @DisplayName("샴페인 증정 값을 확인합니다.")
     void GiftEventTest() {
 
-        Order order1 = new Order("양송이수프", 1);
-        Order order2 = new Order("아이스크림", 5);
-        Order order3 = new Order("티본스테이크", 6);
+        Order order1 = new Order("양송이수프", "1");
+        Order order2 = new Order("아이스크림", "5");
+        Order order3 = new Order("티본스테이크", "6");
 
         GiftEvent giftEvent = new GiftEvent(new Orders(List.of(order1, order2, order3)), new Day(11));
+        giftEvent.calculateDiscount();
 
         int result = giftEvent.getDiscountedValue();
         int answer = 25_000;

@@ -10,18 +10,13 @@ import christmas.Model.PriceBeforeDiscount;
 import christmas.Model.TotalBenefit;
 import christmas.View.InputView;
 import christmas.View.OutputView;
-import java.util.List;
 
 public class EventController {
 
     public void runEvent() {
         InputView.printStartMessage();
-        int date = getValidDate();
-        List<String> userOrders = getValidMenu();
-
-        OrderController orderController = new OrderController(date, userOrders);
-        Day day = orderController.getDay();
-        Orders orders = orderController.getOrders();
+        Day day = getValidDate();
+        Orders orders = getValidMenu();
 
         OutputView.printBenefitPreview(day);
         OutputView.printOrderMenu(orders);

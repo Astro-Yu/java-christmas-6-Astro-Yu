@@ -19,7 +19,7 @@ public class InputValidator {
 
     public static void checkInputDigit(String input) {
         if (isDigit(input)) {
-            throw new IllegalArgumentException(ErrorMessages.INVALID_NUMBER_MESSAGE.getMessage());
+            throw new IllegalArgumentException(ErrorMessages.INVALID_DATE_RANGE.getMessage());
         }
     }
 

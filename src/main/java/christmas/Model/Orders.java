@@ -7,19 +7,19 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public class Orders {
-    List<Order> OrderedItems;
+    private final List<Order> orderedItems;
 
-    public Orders(List<Order> orderedItems) {
-        this.OrderedItems = orderedItems;
+    public Orders(List<Order> inputOrderedItems) {
+        this.orderedItems = inputOrderedItems;
         validate();
     }
 
     public List<Order> getOrderedItems() {
-        return OrderedItems;
+        return orderedItems;
     }
 
     public int getTotalPrice() {
-        return OrderedItems.stream().mapToInt(Order::getPrice).sum();
+        return orderedItems.stream().mapToInt(Order::getPrice).sum();
     }
 
     private void validate() {
@@ -29,7 +29,7 @@ public class Orders {
     }
 
     private void checkAllSize() {
-        int allCount = OrderedItems.stream()
+        int allCount = orderedItems.stream()
                 .mapToInt(Order::getCount)
                 .sum();
         if (allCount > 20) {
@@ -38,22 +38,22 @@ public class Orders {
     }
 
     private void checkDuplicateMenu() {
-        Set<String> compareMenu = OrderedItems.stream()
+        Set<String> compareMenu = orderedItems.stream()
                 .map(Order::getName)
                 .collect(Collectors.toSet());
 
-        if (compareMenu.size() != OrderedItems.size()) {
+        if (compareMenu.size() != orderedItems.size()) {
             throw new IllegalArgumentException(ErrorMessages.INPUT_INVALID_ORDER.getMessage());
         }
     }
 
     private void checkOnlyDrink() {
-        List<String> compareMenu = OrderedItems.stream()
+        List<String> compareMenu = orderedItems.stream()
                 .map(Order::getName)
                 .filter(x -> Menu.getDrinkMenu().contains(x))
                 .toList();
 
-        if (compareMenu.size() == OrderedItems.size()) {
+        if (compareMenu.size() == orderedItems.size()) {
             throw new IllegalArgumentException(ErrorMessages.INPUT_INVALID_ORDER.getMessage());
         }
     }

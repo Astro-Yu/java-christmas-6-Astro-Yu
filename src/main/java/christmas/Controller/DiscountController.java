@@ -22,8 +22,8 @@ public class DiscountController {
 
     public EventLog setEventLog() {
 
-        return new EventLog(new ChristmasDiscount(day), new GiftEvent(orders, day)
-                , new SpecialDiscount(day), new WeekdayDiscount(orders, day), new WeekendDiscount(orders, day),
+        return new EventLog(new ChristmasDiscount(day), new GiftEvent(orders, day),
+                new SpecialDiscount(day), new WeekdayDiscount(orders, day), new WeekendDiscount(orders, day),
                 new PriceBeforeDiscount(orders));
     }
 }

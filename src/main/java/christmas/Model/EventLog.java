@@ -15,7 +15,6 @@ public class EventLog {
     SpecialDiscount specialDiscount;
     WeekdayDiscount weekdayDiscount;
     WeekendDiscount weekendDiscount;
-
     PriceBeforeDiscount priceBeforeDiscount;
 
     List<String> eventHistory = new ArrayList<>();
@@ -23,14 +22,13 @@ public class EventLog {
     public EventLog(ChristmasDiscount christmasDiscount, GiftEvent giftEvent, SpecialDiscount specialDiscount,
                     WeekdayDiscount weekdayDiscount, WeekendDiscount weekendDiscount,
                     PriceBeforeDiscount priceBeforeDiscount) {
-        if (priceBeforeDiscount.over10kWon()) {
-            this.christmasDiscount = christmasDiscount;
-            this.giftEvent = giftEvent;
-            this.specialDiscount = specialDiscount;
-            this.weekdayDiscount = weekdayDiscount;
-            this.weekendDiscount = weekendDiscount;
-            this.priceBeforeDiscount = priceBeforeDiscount;
-        }
+        this.christmasDiscount = christmasDiscount;
+        this.giftEvent = giftEvent;
+        this.specialDiscount = specialDiscount;
+        this.weekdayDiscount = weekdayDiscount;
+        this.weekendDiscount = weekendDiscount;
+        this.priceBeforeDiscount = priceBeforeDiscount;
+
     }
 
     public int getTotalBenefit() {
