@@ -2,8 +2,8 @@ package christmas;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import christmas.Model.Discount.ChristmasDiscount;
 import christmas.Model.Day;
+import christmas.Model.Discount.ChristmasDiscount;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -16,9 +16,9 @@ public class ChristmasDiscountTest {
     void christmasDiscountTest() {
 
         ChristmasDiscount christmasDiscount = new ChristmasDiscount(new Day(24));
-
+        christmasDiscount.calculateDiscount();
         int result = christmasDiscount.getDiscountedValue();
-        int answer = 1000 + 100 * 24;
+        int answer = 1000 + 100 * 23;
 
         assertThat(result).isEqualTo(answer);
     }
@@ -29,6 +29,7 @@ public class ChristmasDiscountTest {
     void isChristmasDiscountActive(int target) {
 
         ChristmasDiscount christmasDiscount = new ChristmasDiscount(new Day(target));
+        christmasDiscount.calculateDiscount();
 
         boolean result = christmasDiscount.isEventActive();
         boolean answer = false;

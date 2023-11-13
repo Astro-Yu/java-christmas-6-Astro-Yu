@@ -35,7 +35,7 @@ public class InputValidatorTest {
     void checkDigitTest(String input) {
         Assertions.assertThatThrownBy(() -> InputValidator.checkInputDigit(input))
                 .isInstanceOf(IllegalArgumentException.class)
-                .hasMessageContaining(ErrorMessages.INVALID_NUMBER_MESSAGE.getMessage());
+                .hasMessageContaining(ErrorMessages.INVALID_DATE_RANGE.getMessage());
     }
 
     @ParameterizedTest
