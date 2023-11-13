@@ -39,6 +39,7 @@ public class WeekdayDiscount extends Discount {
     @Override
     public boolean isEventActive() {
         return !day.isWeekend()
+                && discountedPrice != 0
                 && day.getDate() >= SpecialDays.DEC_1ST.getDate()
                 && day.getDate() <= SpecialDays.DEC_31ST.getDate();
     }
