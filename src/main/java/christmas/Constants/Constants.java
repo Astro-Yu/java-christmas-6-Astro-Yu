@@ -6,6 +6,7 @@ public class Constants {
     public final static String NOTHING = "없음";
     public final static String WON = "원";
     public final static String COUNT = "개";
+    public final static String PERSON_UNIT = "명";
     public final static String MINUS = "-";
     public final static String CHRISTMAS_DISCOUNT = "크리스마스 디데이 할인: ";
     public final static String SPECIAL_DISCOUNT = "특별 할인: ";

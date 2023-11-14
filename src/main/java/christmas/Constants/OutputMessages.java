@@ -9,4 +9,6 @@ public class OutputMessages {
     public static final String TOTAL_DISCOUNT = "<총혜택 금액>";
     public static final String TOTAL_ORDER_AFTER_DISCOUNT = "<할인 후 예상 결제 금액>";
     public static final String DEC_EVENT_BADGE = "<12월 이벤트 배지>";
+    public static final String MONTH_TOTAL_INCOME = "이번 달의 총 판매 금액은 ";
+    public static final String MONTH_TOTAL_CUSTOMER = "이번 달의 총 방문 고객은 ";
 }

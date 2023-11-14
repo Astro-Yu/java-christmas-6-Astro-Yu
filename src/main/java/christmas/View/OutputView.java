@@ -13,7 +13,7 @@ import christmas.Model.TotalBenefit;
 import java.util.List;
 
 public class OutputView {
-    
+
     public static void printBenefitPreview(Day day) {
         String resultMessage = String.format(OutputMessages.BENEFIT_PREVIEW_MESSAGE, day.getDate());
         System.out.println(resultMessage);
@@ -70,5 +70,10 @@ public class OutputView {
     public static void printEventBadge(TotalBenefit totalBenefit) {
         System.out.println(OutputMessages.DEC_EVENT_BADGE);
         System.out.println(totalBenefit.getBadge());
+    }
+
+    public static void printMonthStats(int totalIncome, int totalCustomer) {
+        System.out.println(OutputMessages.MONTH_TOTAL_INCOME + numberFormat(totalIncome) + Constants.WON);
+        System.out.println(OutputMessages.MONTH_TOTAL_CUSTOMER + numberFormat(totalCustomer) + Constants.PERSON_UNIT);
     }
 }
