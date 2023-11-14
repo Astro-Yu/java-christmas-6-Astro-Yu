@@ -43,33 +43,58 @@ public class EventLog {
     }
 
     public List<String> getEventHistory() {
+        setChristmasDiscount();
+        setSpecialDiscount();
+        setWeekdayDiscount();
+        setWeekendDiscount();
+        setGiftEvent();
+        setNothing();
+
+        return eventHistory;
+    }
+
+    private void setChristmasDiscount() {
         if (christmasDiscount.isEventActive() && priceBeforeDiscount.over10kWon()) {
             christmasDiscount.calculateDiscount();
             eventHistory.add(christmasDiscount.getEventLog());
         }
+    }
+
+    private void setSpecialDiscount() {
         if (specialDiscount.isEventActive() && priceBeforeDiscount.over10kWon()) {
             specialDiscount.calculateDiscount();
             eventHistory.add(specialDiscount.getEventLog());
         }
+    }
+
+    private void setWeekdayDiscount() {
         if (weekdayDiscount.isEventActive() && priceBeforeDiscount.over10kWon()) {
             weekdayDiscount.calculateDiscount();
             if (weekdayDiscount.getDiscountedValue() > 0) {
                 eventHistory.add(weekdayDiscount.getEventLog());
             }
         }
+    }
+
+    private void setWeekendDiscount() {
         if (weekendDiscount.isEventActive() && priceBeforeDiscount.over10kWon()) {
             weekendDiscount.calculateDiscount();
             if (weekendDiscount.getDiscountedValue() > 0) {
                 eventHistory.add(weekendDiscount.getEventLog());
             }
         }
+    }
+
+    private void setGiftEvent() {
         if (giftEvent.isEventActive() && priceBeforeDiscount.over10kWon() && priceBeforeDiscount.over120kWon()) {
             giftEvent.calculateDiscount();
             eventHistory.add(giftEvent.getEventLog());
         }
+    }
+
+    private void setNothing() {
         if (eventHistory.isEmpty()) {
             eventHistory.add(Constants.NOTHING);
         }
-        return eventHistory;
     }
 }
