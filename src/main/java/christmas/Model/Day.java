@@ -1,6 +1,9 @@
 package christmas.Model;
 
+import static christmas.Constants.Constants.ONE_WEEK;
 import static christmas.Constants.ErrorMessages.INVALID_DATE_RANGE;
+import static christmas.Constants.SpecialDays.DEC_1ST;
+import static christmas.Constants.SpecialDays.DEC_31ST;
 
 import christmas.Constants.FirstDays;
 import christmas.Constants.SpecialDays;
@@ -20,8 +23,8 @@ public class Day {
     }
 
     public boolean isWeekend() {
-        return date % 7 == FirstDays.FRI.getFirstDayOfDec()
-                || date % 7 == FirstDays.SAT.getFirstDayOfDec();
+        return date % ONE_WEEK == FirstDays.FRI.getFirstDayOfDec()
+                || date % ONE_WEEK == FirstDays.SAT.getFirstDayOfDec();
     }
 
     public boolean isStarDay() {
@@ -34,7 +37,8 @@ public class Day {
     }
 
     private void isProperRange() {
-        if (date < 1 || date > 31) {
+        if (date < DEC_1ST.getDate()
+                || date > DEC_31ST.getDate()) {
             throw new IllegalArgumentException(INVALID_DATE_RANGE.getMessage());
         }
     }

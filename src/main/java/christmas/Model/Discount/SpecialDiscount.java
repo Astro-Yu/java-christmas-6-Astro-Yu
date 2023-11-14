@@ -7,7 +7,7 @@ import christmas.Constants.SpecialDays;
 import christmas.Model.Day;
 
 public class SpecialDiscount extends Discount {
-    private final static int specialDiscountValue = 1_000;
+    private final static int SPECIAL_DISCOUNT_VALUE = 1_000;
 
     public SpecialDiscount(Day day) {
         this.day = day;
@@ -15,7 +15,7 @@ public class SpecialDiscount extends Discount {
 
     @Override
     public void calculateDiscount() {
-        discountedPrice = specialDiscountValue;
+        discountedPrice = SPECIAL_DISCOUNT_VALUE;
     }
 
     @Override

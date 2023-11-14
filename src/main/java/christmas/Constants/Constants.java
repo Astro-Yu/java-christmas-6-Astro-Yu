@@ -1,6 +1,8 @@
 package christmas.Constants;
 
 public class Constants {
+
+    public final static Integer ONE_WEEK = 7;
     public final static String NOTHING = "없음";
     public final static String WON = "원";
     public final static String COUNT = "개";

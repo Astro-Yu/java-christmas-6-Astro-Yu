@@ -1,11 +1,11 @@
 package christmas.View;
 
+import static christmas.Utils.Utils.splitWithComma;
+import static christmas.Utils.Utils.stringToInteger;
 import static christmas.View.Validator.InputValidator.checkInputBlank;
 import static christmas.View.Validator.InputValidator.checkInputDigit;
 import static christmas.View.Validator.InputValidator.checkInputEmpty;
 import static christmas.View.Validator.InputValidator.checkInputFormat;
-import static christmas.Utils.Utils.splitWithComma;
-import static christmas.Utils.Utils.stringToInteger;
 
 import camp.nextstep.edu.missionutils.Console;
 import christmas.Constants.InputMessages;
@@ -35,7 +35,6 @@ public class InputView {
         for (String order : orders) {
             checkInputFormat(order);
         }
-
         return orders;
     }
 

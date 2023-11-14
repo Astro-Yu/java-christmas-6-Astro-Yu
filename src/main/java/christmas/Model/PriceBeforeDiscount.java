@@ -1,8 +1,7 @@
 package christmas.Model;
 
-import static christmas.Constants.Menu.CHAMPANGE;
-
 import christmas.Constants.Constants;
+import christmas.Constants.Menu;
 import christmas.Model.Orders.Orders;
 
 public class PriceBeforeDiscount {
@@ -23,7 +22,7 @@ public class PriceBeforeDiscount {
 
     public String getGiftMenu() {
         if (over120kWon()) {
-            gift = String.format(CHAMPANGE.getName() + " 1개");
+            gift = Menu.SpecialGift();
         }
         return gift;
     }

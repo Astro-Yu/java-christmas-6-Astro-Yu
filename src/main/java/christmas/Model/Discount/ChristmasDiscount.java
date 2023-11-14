@@ -21,6 +21,7 @@ public class ChristmasDiscount extends Discount {
     @Override
     public void calculateDiscount() {
         discountedPrice = INITIAL_DISCOUNT + DISCOUNT_PER_DAY * (day.getDate() - 1);
+        // 이벤트가 시작하는 1일엔 할인이 적용되지 않으므로 날짜에서 1를 빼줍니다.
     }
 
     @Override

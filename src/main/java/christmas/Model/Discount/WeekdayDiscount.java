@@ -1,10 +1,11 @@
 package christmas.Model.Discount;
 
+import static christmas.Constants.SpecialDays.DEC_1ST;
+import static christmas.Constants.SpecialDays.DEC_31ST;
 import static christmas.Utils.Utils.numberFormat;
 
 import christmas.Constants.Constants;
 import christmas.Constants.Menu;
-import christmas.Constants.SpecialDays;
 import christmas.Model.Day;
 import christmas.Model.Orders.Order;
 import christmas.Model.Orders.Orders;
@@ -39,8 +40,8 @@ public class WeekdayDiscount extends Discount {
     @Override
     public boolean isEventActive() {
         return !day.isWeekend()
-                && day.getDate() >= SpecialDays.DEC_1ST.getDate()
-                && day.getDate() <= SpecialDays.DEC_31ST.getDate();
+                && day.getDate() >= DEC_1ST.getDate()
+                && day.getDate() <= DEC_31ST.getDate();
     }
 
     @Override

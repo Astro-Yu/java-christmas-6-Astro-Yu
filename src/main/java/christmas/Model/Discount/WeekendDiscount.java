@@ -21,7 +21,7 @@ public class WeekendDiscount extends Discount {
 
     @Override
     public void calculateDiscount() {
-        int mainMenuCount = 0;
+        int mainMenuCount;
         List<Order> orderedItems = orders.getOrderedItems();
         mainMenuCount = orderedItems.stream()
                 .filter(x -> Menu.getMainMenu().contains(x.getName()))

@@ -53,6 +53,10 @@ public enum Menu {
         return isMain;
     }
 
+    public static String SpecialGift() {
+        return String.format(CHAMPANGE.getName() + " 1개");
+    }
+
     public static List<String> getMenuNames() {
         return Arrays.stream(Menu.values())
                 .map(Menu::getName)
