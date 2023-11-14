@@ -13,7 +13,7 @@ import christmas.Model.TotalBenefit;
 import java.util.List;
 
 public class OutputView {
-
+    
     public static void printBenefitPreview(Day day) {
         String resultMessage = String.format(OutputMessages.BENEFIT_PREVIEW_MESSAGE, day.getDate());
         System.out.println(resultMessage);
@@ -52,10 +52,10 @@ public class OutputView {
 
     public static void printAllBenefit(TotalBenefit totalBenefit) {
         System.out.println(OutputMessages.TOTAL_DISCOUNT);
-        if (totalBenefit.getPrice() > 0) {
+        if (totalBenefit.getPrice() > 0) { // 할인금액이 0원 초과인 경우에만 - 를 붙여서 출력시킴
             System.out.println(Constants.MINUS + numberFormat(totalBenefit.getPrice()) + Constants.WON);
         }
-        if (totalBenefit.getPrice() == 0) {
+        if (totalBenefit.getPrice() == 0) { // 할인금액이 0원인 경우 - 없이 출력시킴.
             System.out.println(totalBenefit.getPrice() + Constants.WON);
         }
         System.out.println();

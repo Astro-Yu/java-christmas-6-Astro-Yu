@@ -17,20 +17,23 @@ public class EventController {
         InputView.printStartMessage();
         Day day = getValidDate();
         Orders orders = getValidMenu();
+        PriceBeforeDiscount priceBeforeDiscount = new PriceBeforeDiscount(orders);
+        EventLog eventLog = new DiscountController(day, orders).setEventLog();
+
+        printEventSummary(day, orders, priceBeforeDiscount, eventLog);
+    }
+
+    private void printEventSummary(Day day, Orders orders, PriceBeforeDiscount priceBeforeDiscount, EventLog eventLog) {
 
         OutputView.printBenefitPreview(day);
         OutputView.printOrderMenu(orders);
-        OutputView.printOriginalPrice(new PriceBeforeDiscount(orders));
-
-        OutputView.printGiftEvent(new PriceBeforeDiscount(orders));
-
-        EventLog eventLog = new DiscountController(day, orders).setEventLog();
-
+        OutputView.printOriginalPrice(priceBeforeDiscount);
+        OutputView.printGiftEvent(priceBeforeDiscount);
         OutputView.printEventLog(eventLog);
 
-        OutputView.printAllBenefit(new TotalBenefit(eventLog.getTotalBenefit()));
+        TotalBenefit totalBenefit = new TotalBenefit(eventLog.getTotalBenefit());
+        OutputView.printAllBenefit(totalBenefit);
         OutputView.printAfterDiscount(orders, eventLog.getExpectedDiscount());
-
-        OutputView.printEventBadge(new TotalBenefit(eventLog.getTotalBenefit()));
+        OutputView.printEventBadge(totalBenefit);
     }
 }
