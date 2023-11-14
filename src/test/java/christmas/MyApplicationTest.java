@@ -9,7 +9,30 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 class MyApplicationTest extends NsTest {
-    private static final String LINE_SEPARATOR = System.lineSeparator();
+    @Test
+    void 할인_테스트1() { // 크리스마스 디데이 할인, 특별할인, 평일 할인, 증정이벤트가 포함되었는지 확인합니다.
+        assertSimpleTest(() -> {
+            run("3", "티본스테이크-1,바비큐립-1,초코케이크-2,제로콜라-1");
+            assertThat(output()).contains(
+                    "평일 할인: ",
+                    "크리스마스 디데이 할인: ",
+                    "특별 할인: ",
+                    "증정 이벤트: "
+            );
+        });
+    }
+
+    @Test
+    void 할인_테스트2() { // 주말 할인, 증정이벤트가 포함되었는지 확인합니다.
+        assertSimpleTest(() -> {
+            run("29", "티본스테이크-1,바비큐립-1,초코케이크-2,제로콜라-1");
+            assertThat(output()).contains(
+                    "주말 할인: ",
+                    "증정 이벤트: "
+            );
+        });
+    }
+
 
     @Test
     void 날짜_예외_테스트() {
@@ -44,6 +67,7 @@ class MyApplicationTest extends NsTest {
 
         });
     }
+
 
     @Override
     protected void runMain() {
