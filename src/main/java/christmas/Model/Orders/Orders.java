@@ -1,4 +1,4 @@
-package christmas.Model;
+package christmas.Model.Orders;
 
 import christmas.Constants.ErrorMessages;
 import christmas.Constants.Menu;

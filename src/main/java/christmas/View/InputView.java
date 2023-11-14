@@ -1,11 +1,11 @@
 package christmas.View;
 
-import static christmas.InputValidator.checkInputBlank;
-import static christmas.InputValidator.checkInputDigit;
-import static christmas.InputValidator.checkInputEmpty;
-import static christmas.InputValidator.checkInputFormat;
-import static christmas.Utils.splitWithComma;
-import static christmas.Utils.stringToInteger;
+import static christmas.View.Validator.InputValidator.checkInputBlank;
+import static christmas.View.Validator.InputValidator.checkInputDigit;
+import static christmas.View.Validator.InputValidator.checkInputEmpty;
+import static christmas.View.Validator.InputValidator.checkInputFormat;
+import static christmas.Utils.Utils.splitWithComma;
+import static christmas.Utils.Utils.stringToInteger;
 
 import camp.nextstep.edu.missionutils.Console;
 import christmas.Constants.InputMessages;

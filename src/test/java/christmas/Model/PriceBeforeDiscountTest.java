@@ -1,9 +1,9 @@
-package christmas;
+package christmas.Model;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import christmas.Model.Order;
-import christmas.Model.Orders;
+import christmas.Model.Orders.Order;
+import christmas.Model.Orders.Orders;
 import christmas.Model.PriceBeforeDiscount;
 import java.util.List;
 import org.junit.jupiter.api.DisplayName;

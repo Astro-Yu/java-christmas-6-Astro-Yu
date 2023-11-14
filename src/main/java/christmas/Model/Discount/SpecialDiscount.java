@@ -1,6 +1,6 @@
 package christmas.Model.Discount;
 
-import static christmas.Utils.numberFormat;
+import static christmas.Utils.Utils.numberFormat;
 
 import christmas.Constants.Constants;
 import christmas.Constants.SpecialDays;

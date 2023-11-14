@@ -1,13 +1,13 @@
 package christmas.Model.Discount;
 
-import static christmas.Utils.numberFormat;
+import static christmas.Utils.Utils.numberFormat;
 
 import christmas.Constants.Constants;
 import christmas.Constants.Menu;
 import christmas.Constants.SpecialDays;
 import christmas.Model.Day;
-import christmas.Model.Order;
-import christmas.Model.Orders;
+import christmas.Model.Orders.Order;
+import christmas.Model.Orders.Orders;
 import java.util.List;
 
 public class WeekendDiscount extends Discount {

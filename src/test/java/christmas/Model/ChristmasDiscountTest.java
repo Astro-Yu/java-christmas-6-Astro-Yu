@@ -1,4 +1,4 @@
-package christmas;
+package christmas.Model;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

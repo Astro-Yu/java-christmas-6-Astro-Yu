@@ -1,7 +1,7 @@
 package christmas.Model.Discount;
 
 import christmas.Model.Day;
-import christmas.Model.Orders;
+import christmas.Model.Orders.Orders;
 import christmas.Model.PriceBeforeDiscount;
 
 public abstract class Discount {

@@ -1,11 +1,11 @@
-package christmas;
+package christmas.Model;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 import christmas.Model.Day;
 import christmas.Model.Discount.WeekdayDiscount;
-import christmas.Model.Order;
-import christmas.Model.Orders;
+import christmas.Model.Orders.Order;
+import christmas.Model.Orders.Orders;
 import java.util.List;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;

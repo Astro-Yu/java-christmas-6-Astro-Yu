@@ -1,13 +1,13 @@
 package christmas.View;
 
-import static christmas.Utils.numberFormat;
+import static christmas.Utils.Utils.numberFormat;
 
 import christmas.Constants.Constants;
 import christmas.Constants.OutputMessages;
 import christmas.Model.Day;
 import christmas.Model.EventLog;
-import christmas.Model.Order;
-import christmas.Model.Orders;
+import christmas.Model.Orders.Order;
+import christmas.Model.Orders.Orders;
 import christmas.Model.PriceBeforeDiscount;
 import christmas.Model.TotalBenefit;
 import java.util.List;

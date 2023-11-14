@@ -1,4 +1,4 @@
-package christmas;
+package christmas.Model;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -9,8 +9,8 @@ import christmas.Model.Discount.SpecialDiscount;
 import christmas.Model.Discount.WeekdayDiscount;
 import christmas.Model.Discount.WeekendDiscount;
 import christmas.Model.EventLog;
-import christmas.Model.Order;
-import christmas.Model.Orders;
+import christmas.Model.Orders.Order;
+import christmas.Model.Orders.Orders;
 import christmas.Model.PriceBeforeDiscount;
 import java.util.ArrayList;
 import java.util.List;

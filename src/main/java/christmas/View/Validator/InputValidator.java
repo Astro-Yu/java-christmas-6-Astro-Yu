@@ -1,6 +1,6 @@
-package christmas;
+package christmas.View.Validator;
 
-import static christmas.Utils.isDigit;
+import static christmas.Utils.Utils.isDigit;
 
 import christmas.Constants.ErrorMessages;
 import java.util.regex.Pattern;

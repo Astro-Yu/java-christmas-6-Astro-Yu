@@ -1,6 +1,6 @@
-package christmas.Model;
+package christmas.Model.Orders;
 
-import static christmas.Utils.isDigit;
+import static christmas.Utils.Utils.isDigit;
 
 import christmas.Constants.ErrorMessages;
 import christmas.Constants.Menu;

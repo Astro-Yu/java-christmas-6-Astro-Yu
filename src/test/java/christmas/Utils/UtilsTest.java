@@ -1,7 +1,8 @@
-package christmas;
+package christmas.Utils;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import christmas.Utils.Utils;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.jupiter.api.DisplayName;

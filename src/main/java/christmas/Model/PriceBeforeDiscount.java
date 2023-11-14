@@ -3,6 +3,7 @@ package christmas.Model;
 import static christmas.Constants.Menu.CHAMPANGE;
 
 import christmas.Constants.Constants;
+import christmas.Model.Orders.Orders;
 
 public class PriceBeforeDiscount {
     private final static int MINIMUM_GIFT_AMOUNT = 120_000;

@@ -1,4 +1,4 @@
-package christmas;
+package christmas.Utils;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;

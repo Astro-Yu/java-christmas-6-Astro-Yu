@@ -5,7 +5,7 @@ import static christmas.Controller.UserInputHandler.getValidMenu;
 
 import christmas.Model.Day;
 import christmas.Model.EventLog;
-import christmas.Model.Orders;
+import christmas.Model.Orders.Orders;
 import christmas.Model.PriceBeforeDiscount;
 import christmas.Model.TotalBenefit;
 import christmas.View.InputView;

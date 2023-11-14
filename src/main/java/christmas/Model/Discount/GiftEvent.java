@@ -1,12 +1,12 @@
 package christmas.Model.Discount;
 
-import static christmas.Utils.numberFormat;
+import static christmas.Utils.Utils.numberFormat;
 
 import christmas.Constants.Constants;
 import christmas.Constants.Menu;
 import christmas.Constants.SpecialDays;
 import christmas.Model.Day;
-import christmas.Model.Orders;
+import christmas.Model.Orders.Orders;
 
 public class GiftEvent extends Discount {
 
