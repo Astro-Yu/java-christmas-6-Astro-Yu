@@ -3,6 +3,7 @@ package christmas.Constants;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public enum Menu {
@@ -58,34 +59,30 @@ public enum Menu {
     }
 
     public static List<String> getMenuNames() {
-        return Arrays.stream(Menu.values())
-                .map(Menu::getName)
-                .collect(Collectors.toList());
+        return getMenuByCriteria(menu -> true);
     }
 
     public static List<String> getDrinkMenu() {
-        return Arrays.stream(Menu.values())
-                .filter(Menu::isDrink)
-                .map(Menu::getName)
-                .collect(Collectors.toList());
+        return getMenuByCriteria(Menu::isDrink);
     }
 
     public static List<String> getDesertMenu() {
-        return Arrays.stream(Menu.values())
-                .filter(Menu::isDesert)
-                .map(Menu::getName)
-                .collect(Collectors.toList());
+        return getMenuByCriteria(Menu::isDesert);
     }
 
     public static List<String> getMainMenu() {
-        return Arrays.stream(Menu.values())
-                .filter(Menu::isMain)
-                .map(Menu::getName)
-                .collect(Collectors.toList());
+        return getMenuByCriteria(Menu::isMain);
     }
 
     public static Map<String, Integer> getMenuNamesAndPrices() {
         return Arrays.stream(Menu.values())
                 .collect(Collectors.toMap(Menu::getName, Menu::getPrice));
+    }
+
+    private static List<String> getMenuByCriteria(Predicate<Menu> criteria) {
+        return Arrays.stream(Menu.values())
+                .filter(criteria)
+                .map(Menu::getName)
+                .collect(Collectors.toList());
     }
 }
