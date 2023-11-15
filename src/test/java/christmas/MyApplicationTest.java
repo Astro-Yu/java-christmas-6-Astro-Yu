@@ -33,6 +33,15 @@ class MyApplicationTest extends NsTest {
         });
     }
 
+    @Test
+    void 뱃지_테스트1() { // 올바른 뱃지를 출력하는지 확인합니다.
+        assertSimpleTest(() -> {
+            run("29", "해산물파스타-5,");
+            assertThat(output()).contains(
+                    "산타"
+            );
+        });
+    }
 
     @Test
     void 날짜_예외_테스트() {
@@ -59,6 +68,15 @@ class MyApplicationTest extends NsTest {
     }
 
     @ParameterizedTest
+    @ValueSource(strings = {"김치볶음밥-2", "코카콜라-2", "알리오올리오-2", "백반정식-1"})
+    void 없는_주문_테스트(String target) {
+        assertSimpleTest(() -> {
+            runException("3", target, "제로콜라-1");
+            assertThat(output()).contains("[ERROR] 유효하지 않은 주문입니다. 다시 입력해 주세요.");
+        });
+    }
+
+    @ParameterizedTest
     @ValueSource(strings = {"아이스크림", "아이스크림한개", "아이스크림-", "아이스크림1"})
     void 주문_형식_테스트(String target) {
         assertSimpleTest(() -> {
@@ -67,7 +85,6 @@ class MyApplicationTest extends NsTest {
 
         });
     }
-
 
     @Override
     protected void runMain() {
