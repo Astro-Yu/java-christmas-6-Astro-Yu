@@ -1,6 +1,6 @@
 ## [회신: 크리스마스 프로모션에 대한 건]
 
-보낸 사람: 개발팀 유석현 <`dev_yush@woowacourse.io`>
+보낸 사람: 개발팀 유석현 <`dev_astro-yu@woowacourse.io`>
 
 받는 사람: 비니지스팀 <`biz@woowacourse.io`>
 
@@ -168,4 +168,4 @@
 
 ---
 
-**❓ 코드에 대한 문의가 있으시면 개발팀 유석현 <`biz_yush@woowacourse.io`> 으로 메일 주세요.**
+**❓ 코드에 대한 문의가 있으시면 개발팀 유석현 <`dev_astro-yu@woowacourse.io`> 으로 메일 주세요.**
