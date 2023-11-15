@@ -34,7 +34,7 @@ class MyApplicationTest extends NsTest {
     }
 
     @Test
-    void 뱃지_테스트1() { // 올바른 뱃지를 출력하는지 확인합니다.
+    void 뱃지_테스트() {
         assertSimpleTest(() -> {
             run("29", "해산물파스타-5,");
             assertThat(output()).contains(
@@ -42,6 +42,23 @@ class MyApplicationTest extends NsTest {
             );
         });
     }
+
+    @Test
+    void 초과_수량_주문_테스트() {
+        assertSimpleTest(() -> {
+            runException("3", "티본스테이크-10,바비큐립-11");
+            assertThat(output()).contains("[ERROR] 유효하지 않은 주문입니다. 다시 입력해 주세요.");
+        });
+    }
+
+    @Test
+    void 주문_안함_테스트() {
+        assertSimpleTest(() -> {
+            runException("3", "티본스테이크-0,바비큐립-11");
+            assertThat(output()).contains("[ERROR] 유효하지 않은 주문입니다. 다시 입력해 주세요.");
+        });
+    }
+
 
     @Test
     void 날짜_예외_테스트() {

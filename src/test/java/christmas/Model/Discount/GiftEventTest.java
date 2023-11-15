@@ -1,9 +1,8 @@
-package christmas.Model;
+package christmas.Model.Discount;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 import christmas.Model.Day;
-import christmas.Model.Discount.GiftEvent;
 import christmas.Model.Orders.Order;
 import christmas.Model.Orders.Orders;
 import java.util.List;
