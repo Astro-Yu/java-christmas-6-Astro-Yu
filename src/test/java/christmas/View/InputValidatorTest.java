@@ -17,7 +17,7 @@ public class InputValidatorTest {
 
         Assertions.assertThatThrownBy(() -> InputValidator.checkInputEmpty(target))
                 .isInstanceOf(IllegalArgumentException.class)
-                .hasMessageContaining(ErrorMessages.INPUT_EMPTY_MESSGAE.getMessage());
+                .hasMessageContaining(ErrorMessages.INPUT_EMPTY_MESSAGE.getMessage());
     }
 
     @Test

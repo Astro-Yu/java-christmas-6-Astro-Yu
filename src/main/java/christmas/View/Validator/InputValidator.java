@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 public class InputValidator {
     public static void checkInputEmpty(String input) {
         if (isEmpty(input)) {
-            throw new IllegalArgumentException(ErrorMessages.INPUT_EMPTY_MESSGAE.getMessage());
+            throw new IllegalArgumentException(ErrorMessages.INPUT_EMPTY_MESSAGE.getMessage());
         }
     }
 
