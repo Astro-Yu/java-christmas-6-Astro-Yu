@@ -1,6 +1,6 @@
 package christmas.Model;
 
-public class TotalOrderIncome {
+public class TotalStats {
     private static int totalIncome = 0;
     private static int totalCustomer = 0;
 

@@ -1,6 +1,6 @@
 package christmas.Model;
 
-import static christmas.Model.TotalOrderIncome.calculateTotalStats;
+import static christmas.Model.TotalStats.calculateTotalStats;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.List;
@@ -23,7 +23,7 @@ public class TotalOrderIncomeTest {
         int incomeResult = incomes.stream().mapToInt(Integer::intValue).sum();
         int customerResult = incomes.size();
 
-        assertThat(TotalOrderIncome.getTotalIncome()).isEqualTo(incomeResult);
-        assertThat(TotalOrderIncome.getTotalCustomer()).isEqualTo(customerResult);
+        assertThat(TotalStats.getTotalIncome()).isEqualTo(incomeResult);
+        assertThat(TotalStats.getTotalCustomer()).isEqualTo(customerResult);
     }
 }
