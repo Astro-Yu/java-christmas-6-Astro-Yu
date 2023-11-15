@@ -2,8 +2,7 @@ package christmas.Model;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import christmas.Constants.ErrorMessages;
-import christmas.Model.Day;
+import christmas.Constants.Messages.ErrorMessages;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;

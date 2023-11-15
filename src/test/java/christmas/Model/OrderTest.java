@@ -1,6 +1,6 @@
 package christmas.Model;
 
-import christmas.Constants.ErrorMessages;
+import christmas.Constants.Messages.ErrorMessages;
 import christmas.Model.Orders.Order;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;

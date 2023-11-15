@@ -9,6 +9,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class UserInputHandler {
+    final static int MENU_INDEX = 0;
+    final static int COUNT_INDEX = 1;
 
     public static Day getValidDate() {
         while (true) {
@@ -27,7 +29,7 @@ public class UserInputHandler {
                 List<String> inputOrderMenus = InputView.readOrders();
                 List<Order> orderMenus = inputOrderMenus.stream()
                         .map(Utils::splitWithDash)
-                        .map(orderMenu -> new Order(orderMenu.get(0), orderMenu.get(1)))
+                        .map(orderMenu -> new Order(orderMenu.get(MENU_INDEX), orderMenu.get(COUNT_INDEX)))
                         .collect(Collectors.toList());
 
                 return new Orders(orderMenus);

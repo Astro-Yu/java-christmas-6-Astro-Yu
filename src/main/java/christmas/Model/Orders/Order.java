@@ -2,8 +2,8 @@ package christmas.Model.Orders;
 
 import static christmas.Utils.Utils.isDigit;
 
-import christmas.Constants.ErrorMessages;
 import christmas.Constants.Menu;
+import christmas.Constants.Messages.ErrorMessages;
 import java.util.List;
 import java.util.Map;
 

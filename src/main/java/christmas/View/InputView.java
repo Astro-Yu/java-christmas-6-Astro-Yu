@@ -8,7 +8,7 @@ import static christmas.View.Validator.InputValidator.checkInputEmpty;
 import static christmas.View.Validator.InputValidator.checkInputFormat;
 
 import camp.nextstep.edu.missionutils.Console;
-import christmas.Constants.InputMessages;
+import christmas.Constants.Messages.InputMessages;
 import java.util.List;
 
 public class InputView {

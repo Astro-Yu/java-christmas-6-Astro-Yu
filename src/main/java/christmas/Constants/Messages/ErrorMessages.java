@@ -1,4 +1,4 @@
-package christmas.Constants;
+package christmas.Constants.Messages;
 
 public enum ErrorMessages {
 

@@ -1,7 +1,7 @@
 package christmas.Model;
 
 import static christmas.Constants.Constants.ONE_WEEK;
-import static christmas.Constants.ErrorMessages.INVALID_DATE_RANGE;
+import static christmas.Constants.Messages.ErrorMessages.INVALID_DATE_RANGE;
 import static christmas.Constants.SpecialDays.DEC_1ST;
 import static christmas.Constants.SpecialDays.DEC_31ST;
 

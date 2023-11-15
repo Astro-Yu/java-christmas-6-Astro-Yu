@@ -1,6 +1,6 @@
 package christmas.View;
 
-import christmas.Constants.ErrorMessages;
+import christmas.Constants.Messages.ErrorMessages;
 import christmas.View.Validator.InputValidator;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;

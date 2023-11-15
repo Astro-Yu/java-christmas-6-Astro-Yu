@@ -3,7 +3,7 @@ package christmas.View;
 import static christmas.Utils.Utils.numberFormat;
 
 import christmas.Constants.Constants;
-import christmas.Constants.OutputMessages;
+import christmas.Constants.Messages.OutputMessages;
 import christmas.Model.Day;
 import christmas.Model.EventLog;
 import christmas.Model.Orders.Order;

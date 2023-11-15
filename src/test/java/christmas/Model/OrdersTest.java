@@ -1,6 +1,6 @@
 package christmas.Model;
 
-import christmas.Constants.ErrorMessages;
+import christmas.Constants.Messages.ErrorMessages;
 import christmas.Model.Orders.Order;
 import christmas.Model.Orders.Orders;
 import java.util.List;

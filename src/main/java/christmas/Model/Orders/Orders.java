@@ -1,7 +1,7 @@
 package christmas.Model.Orders;
 
-import christmas.Constants.ErrorMessages;
 import christmas.Constants.Menu;
+import christmas.Constants.Messages.ErrorMessages;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;

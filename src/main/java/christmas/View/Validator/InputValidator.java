@@ -2,7 +2,7 @@ package christmas.View.Validator;
 
 import static christmas.Utils.Utils.isDigit;
 
-import christmas.Constants.ErrorMessages;
+import christmas.Constants.Messages.ErrorMessages;
 import java.util.regex.Pattern;
 
 public class InputValidator {
